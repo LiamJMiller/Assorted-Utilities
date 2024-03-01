@@ -1,0 +1,176 @@
+body {
+	font-family: Arial, sans-serif;
+	display: flex;
+	background-color: #004d40;
+	height: 100vh;
+	margin: 0;
+}
+
+#posts {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 70%;
+	padding: 30px;
+	color: #004d40;
+	background-color: #80cbc4;
+	box-shadow: inset 5px 0px 10px 5px rgba(243, 229, 245, 1);
+	overflow-y: auto; /* Add a scrollbar when the content overflows */
+}
+
+.post {
+	display: flex;
+	flex-direction: column;
+	border-bottom: 1px solid #004d40;
+	padding: 20px 0;
+	background-color: #80cbc4;
+	color: #004d40;
+}
+
+.post h2 {
+	margin: 0;
+}
+
+.post p {
+	margin: 0;
+}
+
+#newPostForm {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #80cbc4;
+	background-color: #004d40;
+	width: 30%;
+	max-width: 30%;
+}
+
+#newPostForm form {
+	width: 70%; /* Make the form take up the full width of the div */
+}
+
+#newPostForm input[type="text"],
+#newPostForm textarea {
+	width: 100%; /* Make the textarea take up the full width of the form */
+	margin-bottom: 10px; /* Add some space below the textarea */
+	padding: 10px; /* Add some padding */
+	border-radius: 5px; /* Round the corners */
+	border: none; /* Remove the default border */
+	resize: vertical; /* Allow only vertical resizing */
+}
+
+#newPostForm input[type="submit"] {
+	background-color: #80cbc4;
+	color: #004d40;
+	border: none; /* Remove the default border */
+	padding: 10px 20px; /* Add some padding */
+	border-radius: 5px; /* Round the corners */
+	cursor: pointer; /* Change the cursor when hovering over the button */
+}
+
+#stats {
+	position: fixed;
+	bottom: 5px;
+	right: 5px;
+	padding: 20px;
+	color: #80cbc4;
+	background-color: #004d40;
+	border: 1px solid #004d40;
+	box-shadow: inset 0px 0px 10px 4px rgba(243, 229, 245, 1);
+}
+
+.comments {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+	max-width: 100%;
+	padding: 0 10px;
+	color: #002d20;
+	background-color: rgba(243, 229, 245, 0.75);
+	border-radius: 5px;
+	margin-top: 10px;
+}
+
+.comments p {
+	border-bottom: 1px solid #ddd;
+	padding: 10px 0;
+	color: #002d20;
+}
+
+.comment-form {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 10px;
+}
+
+.comment-form .comment-input {
+	flex-grow: 1;
+	margin-right: 10px;
+	padding: 5px;
+	border: 1px solid #002d20;
+	border-radius: 5px;
+}
+
+.comment-form button {
+	padding: 5px 10px;
+	border: none;
+	border-radius: 5px;
+	background-color: #004d40;
+	color: #80cbc4;
+	cursor: pointer;
+}
+
+.comment-form button:hover {
+	background-color: #002d20;
+}
+
+.comment {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	width: 100%;
+	color: #002d20;
+	white-space: pre-wrap; /* or 'normal' */
+}
+
+.comment:not(:last-child) {
+	border-bottom: 1px solid #002d20;
+}
+
+.like-button {
+	color: #80cbc4;
+	background-color: #004d40;
+	border: none;
+	border-radius: 10px;
+	padding: 5px 10px;
+	cursor: pointer;
+	width: 100px;
+}
+
+.delete-button {
+	color: #ff6347;
+	background-color: #004d40;
+	border: none;
+	border-radius: 10px;
+	padding: 5px 10px;
+	cursor: pointer;
+	width: 100px;
+}
+
+.like-button:hover,
+.delete-button:hover {
+	background-color: #002d20;
+}
+
+.img {
+	width: 500px;
+	height: 300px;
+	object-fit: cover;
+}
+
+.error {
+	color: #ff6347;
+	font-weight: bold;
+}

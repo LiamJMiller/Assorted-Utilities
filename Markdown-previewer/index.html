@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				display: flex;
+				justify-content: space-between;
+				padding: 10px;
+				box-sizing: border-box;
+				width: 100%;
+				margin: 0 auto;
+				background-color: #f5f5f5;
+			}
+
+			main {
+				display: flex;
+				justify-content: space-evenly;
+				width: 100%;
+			}
+
+			section {
+				width: 30%;
+				border: 1px solid #ccc;
+				margin-bottom: 10px;
+				padding: 10px;
+				background-color: #fff;
+			}
+
+			#input,
+			#output,
+			#cheatsheet {
+				flex: 1 0 30%;
+				width: 100%;
+				min-height: 10rem;
+				height: 11rem;
+				padding: 10px;
+				box-sizing: border-box;
+				background-color: #e8e8e8;
+				resize: none;
+				border: #333 2px solid;
+			}
+
+			pre {
+				margin: 0;
+				height: 100%;
+			}
+
+			h2 {
+				color: #333;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<section>
+				<h2>Input</h2>
+				<textarea id="input" oninput="updateOutput()"></textarea>
+			</section>
+			<section>
+				<h2>Output</h2>
+				<div id="output"></div>
+			</section>
+			<section>
+				<h2>Markdown Cheatsheet</h2>
+				<div id="cheatsheet">
+					<pre>
+                    # H1
+                    ## H2
+                    ### H3
+                    > Blockquote
+                    **bold**
+                    *italic*
+                    ![alt text](image url)
+                    [link text](url)
+                </pre
+					>
+				</div>
+			</section>
+		</main>
+
+		<script>
+			function updateOutput() {
+				var input = document.getElementById("input").value;
+				var output = document.getElementById("output");
+				output.innerHTML = marked(input);
+			}
+
+			function marked(input) {
+				return input
+					.replace(/^# (.*$)/gim, "<h1>$1</h1>")
+					.replace(/^## (.*$)/gim, "<h2>$1</h2>")
+					.replace(/^### (.*$)/gim, "<h3>$1</h3>")
+					.replace(/^\> (.*$)/gim, "<blockquote>$1</blockquote>")
+					.replace(/\*\*(.*)\*\*/gim, "<b>$1</b>")
+					.replace(/\*(.*)\*/gim, "<i>$1</i>")
+					.replace(/!\[(.*?)\]\((.*?)\)/gim, "<img alt='$1' src='$2' />")
+					.replace(/\[(.*?)\]\((.*?)\)/gim, "<a href='$2'>$1</a>")
+					.replace(/\n$/gim, "<br />");
+			}
+
+			updateOutput();
+		</script>
+	</body>
+</html>

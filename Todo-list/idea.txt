@@ -1,0 +1,41 @@
+//initial idea
+So a kanban style board where they create their own columns and tasks but the intention for this is for it to be used by someone managing many clients therefor they'd need to have a master board then smaller boards of tasks for each client
+
+// copilot
+User Interface (UI): You'll need a UI that allows users to create new columns and tasks. This could be a simple form that takes the column or task name and adds a new column or task to the board when submitted. Each column could be a div with a unique ID, and each task could be a div within its respective column.
+
+Client Boards: For each client, you could create a new board. This could be implemented as a separate page or as a different section on the same page. You could use a dropdown or a list to allow the user to switch between different client boards.
+
+Master Board: The master board could be a summary of all the client boards. It could show the total number of tasks in each column across all client boards, or it could show a list of all tasks grouped by client.
+
+Data Storage: You'll need a way to store the data for each board. This could be done in the browser using something like localStorage if the data doesn't need to be shared between different devices or users. If the data does need to be shared, you'll need a backend server with a database.
+
+Drag and Drop: You've already implemented basic drag and drop functionality. This will need to be extended to allow tasks to be moved between different columns and boards.
+
+Styling: You'll need to style the boards, columns, and tasks to make the interface user-friendly and visually appealing.
+
+// me
+1 i was thinking we go for a warm cold colour design outlining sections clearly 
+2/3 lets start by just completing the highlevel master board first 
+4 this is just a design and concept version so it can be done via local storage, 
+5 yes but lets add a task creation and assign a task importance level as well
+
+// breakdown
+Absolutely, let's break down the concept:
+1. **Kanban Board**: The main concept is a Kanban board, which is a visual tool that organizes work into columns. Each column represents a stage of work. Tasks move from column to column as they progress through stages.
+
+2. **Task Creation**: Users can create tasks, which are represented as draggable elements on the board. Each task has an importance level (low, medium, high), which is visually represented by different colors.
+
+3. **Drag and Drop**: Tasks can be moved from one column to another by dragging and dropping. This represents moving tasks through different stages of work.
+
+4. **Multiple Boards**: Each client has their own board. This allows the user to manage tasks for multiple clients separately.
+
+5. **Master Board**: There is also a master board that provides a high-level overview of all tasks across all client boards.
+
+6. **Data Storage**: All data is stored in the browser's local storage. This allows the data to persist across browser sessions, but it doesn't allow data to be shared between different devices or users.
+
+
+
+// initial bugs found 
+can drag text out of box 
+can drag column into another column

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Book Finder</title>
+	</head>
+	<body>
+        <div class="container">
+		<form id="book-search-form">
+			<h3>Book Finder</h3>
+			<input
+				type="text"
+				id="book-search-input"
+				placeholder="Search for a book"
+				required
+			/>
+			<button type="submit">Search</button>
+		</form>
+
+		<h3>Find random Book</h3>
+		<p>Choose one or more categories to filter the results:</p>
+		<div id="book-category-checkboxes">
+			<input type="checkbox" id="Art" name="category" value="Art" />
+			<label for="Art">Art</label>
+			<input type="checkbox" id="Science" name="category" value="Science" />
+			<label for="Science">Science</label>
+			<input
+				type="checkbox"
+				id="Literature"
+				name="category"
+				value="Literature"
+			/>
+			<label for="Literature">Literature</label>
+			<input type="checkbox" id="History" name="category" value="History" />
+			<label for="History">History</label>
+			<input type="checkbox" id="Fiction" name="category" value="Fiction" />
+			<label for="Fiction">Fiction</label>
+			<input
+				type="checkbox"
+				id="Nonfiction"
+				name="category"
+				value="Nonfiction"
+			/>
+			<label for="Nonfiction">Nonfiction</label>
+			<input type="checkbox" id="Mystery" name="category" value="Mystery" />
+			<label for="Mystery">Mystery</label>
+			<input type="checkbox" id="Fantasy" name="category" value="Fantasy" />
+			<label for="Fantasy">Fantasy</label>
+			<input type="checkbox" id="Romance" name="category" value="Romance" />
+			<label for="Romance">Romance</label>
+			<input type="checkbox" id="Horror" name="category" value="Horror" />
+			<label for="Horror">Horror</label>
+			<input type="checkbox" id="Biography" name="category" value="Biography" />
+			<label for="Biography">Biography</label>
+			<input
+				type="checkbox"
+				id="Autobiography"
+				name="category"
+				value="Autobiography"
+			/>
+			<label for="Autobiography">Autobiography</label>
+			<input type="checkbox" id="Cooking" name="category" value="Cooking" />
+			<label for="Cooking">Cooking</label>
+			<input type="checkbox" id="Travel" name="category" value="Travel" />
+			<label for="Travel">Travel</label>
+			<input type="checkbox" id="Children" name="category" value="Children" />
+			<label for="Children">Children's</label>
+		</div>
+		<button id="random-book-button">Get Random Book</button>
+		<div id="book-results"></div>
+		<script src="script.js"></script>
+	</body>
+</html>

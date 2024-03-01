@@ -1,0 +1,81 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f4f4f4;
+	display: flex;
+	justify-content: space-between;
+}
+
+h2 {
+	color: #333;
+}
+
+#income-section,
+#expense-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: auto;
+	margin: 20px;
+	padding: 20px;
+	border-radius: 5px;
+	background-color: #fff;
+	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="number"] {
+	display: block;
+	margin: 10px 0;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	width: auto;
+}
+
+button {
+	display: block;
+	margin: 10px 0;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	background-color: #333;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #444;
+}
+
+#history-list {
+	list-style-type: none;
+	padding: 0;
+}
+
+#income-display,
+#expense-display,
+#balance-display,
+#tax-display {
+	color: #333;
+	background-color: #ddd;
+	padding: 10px;
+	margin: 10px 0;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+#income-expense-section {
+	flex: 1;
+	margin-right: 20px;
+}
+
+#balance-tax-section {
+	flex: 1;
+	margin-right: 20px;
+}
+
+#history-section {
+	flex: 1;
+}

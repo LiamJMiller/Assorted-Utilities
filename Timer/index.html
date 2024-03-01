@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <main class="timer-container">
+      <section class="timer-container__numbers">
+        <section class="timer-container__numbers">
+          <input type="text" id="timer" class="timer" value="00:00:00" />
+        </section>
+      </section>
+      <section class="timer-container__buttons">
+        <button id="startButton" onclick="startTimer()" class="timer-button">
+          Start
+        </button>
+        <button
+          id="pauseButton"
+          onclick="pauseTimer()"
+          class="timer-button"
+          style="display: none"
+        >
+          Pause
+        </button>
+        <button
+          id="resumeButton"
+          onclick="resumeTimer()"
+          class="timer-button"
+          style="display: none"
+        >
+          Resume
+        </button>
+        <button
+          id="stopButton"
+          onclick="stopTimer()"
+          class="timer-button"
+          style="display: none"
+        >
+          Stop
+        </button>
+      </section>
+    </main>
+    <script src="timer.js"></script>
+  </body>
+</html>

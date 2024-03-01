@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Currency Converter</title>
+		<link rel="stylesheet" href="./styles.css" />
+	</head>
+	<body>
+		<div id="converter">
+			<h1>Currency Converter</h1>
+			<select id="fromCurrency">
+				<option value="GBP">GBP</option>
+				<option value="USD">USD</option>
+				<option value="EUR">EUR</option>
+				<option value="JPY">JPY</option>
+				<option value="AUD">AUD</option>
+			</select>
+			<input type="number" id="amount" placeholder="Amount" />
+			<select id="toCurrency">
+				<option value="GBP">GBP</option>
+				<option value="USD">USD</option>
+				<option value="EUR">EUR</option>
+				<option value="JPY">JPY</option>
+				<option value="AUD">AUD</option>
+			</select>
+			<button id="convert">Convert</button>
+			<input type="number" id="result" readonly />
+
+			<h6>This is not an up to date converter</h6>
+		</div>
+		<script src="./script.js"></script>
+	</body>
+</html>

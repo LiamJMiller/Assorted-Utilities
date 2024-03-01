@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>My Blog</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<div id="newPostForm">
+			<h2>New Post</h2>
+			<form>
+				<label for="title">Title:</label><br />
+				<input type="text" id="title" name="title" /><br />
+				<label for="content">Content:</label><br />
+				<textarea id="content" name="content"></textarea><br />
+				<label for="code">Code:</label><br />
+				<textarea id="code" name="code"></textarea><br />
+				<label for="picture">Picture URL:</label><br />
+				<input type="text" id="picture" name="picture" /><br />
+				<input type="submit" value="Submit" />
+			</form>
+		</div>
+		<div id="posts">
+			<h1>My Blog</h1>
+			<!-- New posts will be added here -->
+		</div>
+		<div id="stats">
+			<h2>Stats</h2>
+			<p>Posts: <span id="postCount">0</span></p>
+			<p>Likes: <span id="likeCount">0</span></p>
+			<!-- <p>Dislikes: <span id="dislikeCount">0</span></p> -->
+			<!-- <p>Most liked post: <span id="mostLiked">None</span></p>
+			<p>Most disliked post: <span id="mostDisliked">None</span></p> -->
+		</div>
+		<script src="./script.js"></script>
+	</body>
+</html>
